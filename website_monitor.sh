@@ -25,8 +25,10 @@ while read -r URL; do
     RESULT=$(curl -o /dev/null -s -w "%{http_code} %{time_total}" --max-time "$TIMEOUT" "$URL")
     EXIT_CODE=$?
 
+    # ALERT if curl failed (timeout, DNS failure, no internet, etc.)
     if [ $EXIT_CODE -ne 0 ]; then
-        echo "$TIMESTAMP | $URL | ERROR | curl_exit_code=$EXIT_CODE" | tee -a "$LOG_FILE"
+        ALERT_MSG="$TIMESTAMP | ALERT | $URL seems DOWN (curl_exit_code=$EXIT_CODE)"
+        echo "$ALERT_MSG" | tee -a "$LOG_FILE"
         continue
     fi
 
@@ -36,9 +38,11 @@ while read -r URL; do
     STATUS="UP"
     if [ "$HTTP_CODE" -ge 400 ]; then
         STATUS="DOWN"
+        ALERT_MSG="$TIMESTAMP | ALERT | $URL returned HTTP $HTTP_CODE"
+        echo "$ALERT_MSG" | tee -a "$LOG_FILE"
     fi
 
     LOG_LINE="$TIMESTAMP | $URL | $STATUS | http_code=$HTTP_CODE | response_time=${RESPONSE_TIME}s"
     echo "$LOG_LINE" | tee -a "$LOG_FILE"
 
-done < "$WEBSITE_LIST"
+done < "$WEBSITE_LIST
