@@ -45,4 +45,4 @@ while read -r URL; do
     LOG_LINE="$TIMESTAMP | $URL | $STATUS | http_code=$HTTP_CODE | response_time=${RESPONSE_TIME}s"
     echo "$LOG_LINE" | tee -a "$LOG_FILE"
 
-done < "$WEBSITE_LIST
+done < "$WEBSITE_LIST"
