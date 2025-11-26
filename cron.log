@@ -1,0 +1,20 @@
+2025-11-26 06:55:01 | https://google.com | UP | http_code=301 | response_time=0.042128s
+2025-11-26 06:55:01 | https://github.com | UP | http_code=200 | response_time=0.068783s
+2025-11-26 06:55:01 | https://facebook.com | UP | http_code=301 | response_time=0.108643s
+2025-11-26 06:55:01 | https://instagram.com | UP | http_code=301 | response_time=0.058960s
+2025-11-26 06:55:01 | ALERT | https://abcdefgfakewebsite12345test.com seems DOWN (curl_exit_code=6)
+2025-11-26 07:00:01 | https://google.com | UP | http_code=301 | response_time=0.043518s
+2025-11-26 07:00:01 | https://github.com | UP | http_code=200 | response_time=0.054981s
+2025-11-26 07:00:01 | https://facebook.com | UP | http_code=301 | response_time=0.049751s
+2025-11-26 07:00:01 | https://instagram.com | UP | http_code=301 | response_time=0.062564s
+2025-11-26 07:00:01 | ALERT | https://abcdefgfakewebsite12345test.com seems DOWN (curl_exit_code=6)
+2025-11-26 07:05:01 | https://google.com | UP | http_code=301 | response_time=0.042786s
+2025-11-26 07:05:01 | https://github.com | UP | http_code=200 | response_time=0.052059s
+2025-11-26 07:05:01 | https://facebook.com | UP | http_code=301 | response_time=0.047880s
+2025-11-26 07:05:01 | https://instagram.com | UP | http_code=301 | response_time=0.058854s
+2025-11-26 07:05:01 | ALERT | https://abcdefgfakewebsite12345test.com seems DOWN (curl_exit_code=6)
+2025-11-26 07:10:02 | https://google.com | UP | http_code=301 | response_time=0.044321s
+2025-11-26 07:10:02 | https://github.com | UP | http_code=200 | response_time=0.064603s
+2025-11-26 07:10:02 | https://facebook.com | UP | http_code=301 | response_time=0.088238s
+2025-11-26 07:10:02 | https://instagram.com | UP | http_code=301 | response_time=0.123030s
+2025-11-26 07:10:02 | ALERT | https://abcdefgfakewebsite12345test.com seems DOWN (curl_exit_code=6)
