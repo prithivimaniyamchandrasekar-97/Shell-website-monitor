@@ -4,8 +4,8 @@
 # Author: Prithvi
 # Date: 2025-11-27
 
-WEBSITE_LIST="./websites.txt"
-LOG_FILE="./website_monitor.log"
+WEBSITE_LIST="/home/ubuntu/Shell-website-monitor/websites.txt"
+LOG_FILE="/home/ubuntu/Shell-website-monitor/website_monitor.log"
 TIMEOUT=10
 
 TIMESTAMP="$(date '+%Y-%m-%d %H:%M:%S')"
