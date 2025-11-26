@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# Website Monitor - Single website version
+# Website Monitor - Multi-website version with alerting
 # Author: Prithvi
-# Date: 2025-11-26
+# Date: 2025-11-27
 
 WEBSITE_LIST="./websites.txt"
 LOG_FILE="./website_monitor.log"
@@ -25,7 +25,7 @@ while read -r URL; do
     RESULT=$(curl -o /dev/null -s -w "%{http_code} %{time_total}" --max-time "$TIMEOUT" "$URL")
     EXIT_CODE=$?
 
-    # ALERT if curl failed (timeout, DNS failure, no internet, etc.)
+    # ALERT if curl failed (timeout, DNS failure, SSL failure, etc.)
     if [ $EXIT_CODE -ne 0 ]; then
         ALERT_MSG="$TIMESTAMP | ALERT | $URL seems DOWN (curl_exit_code=$EXIT_CODE)"
         echo "$ALERT_MSG" | tee -a "$LOG_FILE"
