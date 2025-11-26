@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Website Monitor - Single website version
-# Author: <your-name>
+# Author: Prithvi
 # Date: 2025-11-26
 
 URL="https://google.com"   # Later we will make this read from a file
